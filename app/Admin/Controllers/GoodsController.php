@@ -28,7 +28,7 @@ class GoodsController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('goods_name', __('Goods name'));
-        $grid->column('img', __('Img'));
+        $grid->column('img', __('Img'))->image();
         $grid->column('desc', __('Desc'));
         $grid->column('price', __('Price'));
         $grid->column('created_at', __('Created at'));
@@ -69,8 +69,9 @@ class GoodsController extends AdminController
 
         $form->text('goods_name', __('Goods name'));
         $form->image('img', __('Img'));
-        $form->textarea('desc', __('Desc'));
+        // $form->textarea('desc', __('Desc'));
         $form->number('price', __('Price'));
+        $form->ckeditor('desc', __('Desc'));
 
         return $form;
     }

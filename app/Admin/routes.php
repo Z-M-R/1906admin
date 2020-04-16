@@ -12,7 +12,9 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('admin.home');
     $router->resource('auser', UserController::class);
-    $router->resource('agoods', GoodsController::class);
+    $router->resource('agoodslist', GoodsController::class);
+    $router->resource('agoodspin', PinController::class);
+    $router->resource('agoodsfen', FenController::class);
 
 
 });
