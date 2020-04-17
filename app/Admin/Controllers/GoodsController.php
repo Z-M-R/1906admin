@@ -27,7 +27,7 @@ class GoodsController extends AdminController
         $grid = new Grid(new GoodsModel());
 
         $grid->column('id', __('Id'));
-        $grid->column('goods_name', __('Goods name'));
+        $grid->column('goods_name', __('商品名称'));
         $grid->column('img', __('Img'))->image();
         $grid->column('desc', __('Desc'));
         $grid->column('price', __('Price'));
