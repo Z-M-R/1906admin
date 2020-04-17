@@ -11,10 +11,10 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('admin.home');
-    $router->resource('auser', UserController::class);
-    $router->resource('agoodslist', GoodsController::class);
-    $router->resource('agoodspin', PinController::class);
-    $router->resource('agoodsfen', FenController::class);
+    $router->resource('users', UserController::class);
+    $router->resource('list', GoodsController::class);
+    $router->resource('brand', PinController::class);
+    $router->resource('classify', FenController::class);
 
 
 });
